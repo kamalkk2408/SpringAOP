@@ -16,6 +16,8 @@ public class SpringAopApplication {
 
 //		orderService.createOrder("orderNo1");
 
+		orderService.getOrderNo();
+
 	}
 
 }

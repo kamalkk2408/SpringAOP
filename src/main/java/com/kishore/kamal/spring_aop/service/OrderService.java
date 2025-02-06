@@ -12,4 +12,8 @@ public class OrderService {
     public void createOrder(String orderNo){
         System.out.println("Creating order: "+ orderNo);
     }
+
+    public String getOrderNo(){
+       return "OrderNo1";
+    }
 }

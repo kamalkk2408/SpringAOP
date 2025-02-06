@@ -1,10 +1,7 @@
 package com.kishore.kamal.spring_aop.aop;
 
 import org.aspectj.lang.JoinPoint;
-import org.aspectj.lang.annotation.After;
-import org.aspectj.lang.annotation.Aspect;
-import org.aspectj.lang.annotation.Before;
-import org.aspectj.lang.annotation.Pointcut;
+import org.aspectj.lang.annotation.*;
 import org.springframework.stereotype.Component;
 
 @Aspect
@@ -47,6 +44,14 @@ public class LoggerAspect {
     @Before("validation() && customValidation()")
     public void beforeValidate(){
         System.out.println("Executing beforeValidate");
+    }
+
+    @Pointcut("within(com.kishore.kamal.spring_aop.service..*)")
+    public void afterReturningPointCut(){}
+
+    @AfterReturning(pointcut = "afterReturningPointCut()", returning = "retValue")
+    public void afterReturning(String retValue){
+        System.out.println("Executing afterReturning: " + retValue);
     }
 
 
