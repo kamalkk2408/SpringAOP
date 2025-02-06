@@ -13,6 +13,9 @@ public class SpringAopApplication {
 		ApplicationContext applicationContext = new AnnotationConfigApplicationContext(BeanConfig.class);
 		OrderService orderService = applicationContext.getBean(OrderService.class);
 		orderService.createOrder();
+
+		orderService.createOrder("orderNo1");
+
 	}
 
 }
