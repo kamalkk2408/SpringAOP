@@ -16,4 +16,8 @@ public class OrderService {
     public String getOrderNo(){
        return "OrderNo1";
     }
+
+    public String throwException(){
+        throw new RuntimeException("Dummy excption");
+    }
 }

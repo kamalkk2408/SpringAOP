@@ -55,6 +55,12 @@ public class LoggerAspect {
     }
 
 
+    @AfterThrowing(pointcut = "afterReturningPointCut()", throwing = "retValue")
+    public void afterThrowing(Exception retValue){
+        System.out.println("Executing afterThrowing: " + retValue);
+    }
+
+
 
 
 

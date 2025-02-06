@@ -18,6 +18,13 @@ public class SpringAopApplication {
 
 		orderService.getOrderNo();
 
+		try{
+			orderService.throwException();
+
+		}catch (Exception e){
+//			System.out.println(e);
+		}
+
 	}
 
 }
