@@ -14,7 +14,7 @@ public class SpringAopApplication {
 		OrderService orderService = applicationContext.getBean(OrderService.class);
 		orderService.createOrder();
 
-		orderService.createOrder("orderNo1");
+//		orderService.createOrder("orderNo1");
 
 	}
 
